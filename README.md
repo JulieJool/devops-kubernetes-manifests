@@ -4,7 +4,9 @@
 3. ```helm repo update```     
 
 Сначала необходимо установить сущности kubernetes, для которых будет использоваться ingress-nginx-controller:     
-4. ```helm install prometheus prometheus-community/kube-prometheus-stack --namespace=monitoring --create-namespace```     
+4. ```helm install prometheus prometheus-community/kube-prometheus-stack --namespace=monitoring --create-namespace```   
+
+Перед тем, как выполнить следущую команду, нужно убедиться, что образ приложения был загружен в репозиторий Dockerhub, на который будет ссылаться app-deploy.yaml:       
 5. ```kubectl apply -f app-deploy.yaml```     
 
 Лишь затем устанавливаем сам ingress-nginx-controller:    
