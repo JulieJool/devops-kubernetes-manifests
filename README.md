@@ -3,7 +3,7 @@
 2. ```helm repo add prometheus-community https://prometheus-community.github.io/helm-charts```     
 3. ```helm repo update```     
 
-Сначла необходимо установить сущности, для которых будет использоваться ingress-nginx-controller:     
+Сначла необходимо установить сущности kubernetes, для которых будет использоваться ingress-nginx-controller:     
 4. ```helm install prometheus prometheus-community/kube-prometheus-stack --namespace=monitoring --create-namespace```     
 5. ```kubectl apply -f app-deploy.yaml```     
 
